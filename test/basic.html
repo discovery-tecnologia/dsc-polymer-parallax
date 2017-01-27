@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>dsc-polymer-parallax tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <script src="../../iron-test-helpers/mock-interactions.js"></script>
+
+  <link rel="import" href="../dsc-polymer-paralax.html">
+
+</head>
+<style>
+
+</style>
+<body>
+
+  <test-fixture id="basic">
+    <template>
+      <dsc-polymer-paralax>
+        <h1>Section title</h1>
+        <p>Nam mattis porta mattis. Donec et neque scelerisque, pretium arcu sed, vehicula diam. Nam a arcu eu sapien porta<br>posuere id id arcu. Fusce rhoncus erat ut nisl pharetra.</p>
+        <a href="#">View more</a>
+      </dsc-polymer-paralax>
+    </template>
+  </test-fixture>
+
+  <script>
+    suite('<dsc-polymer-paralax>', function() {
+      var container;
+
+      setup(function() {
+        container = fixture('basic');
+      });
+
+      test('Content sections count', function() {
+        // container.setAttribute('show-buttons', 'true');
+        // expect(container.showButtons).to.be.equal(true);
+        // expect(container.querySelector('.buttons').attributes).to.have.ownProperty('visible');
+        expect(Polymer.dom(container).queryDistributedElements('*').length).to.be.equal(3);
+      });
+
+    });
+  </script>
+</body>
+</html>

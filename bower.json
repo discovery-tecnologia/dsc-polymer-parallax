@@ -1,0 +1,38 @@
+{
+  "name": "dsc-polymer-parallax",
+  "description": "Sections with background image with parallax effect when page scrolling",
+  "version": "0.0.1",
+  "authors": [
+    "Discovery Tecnologia"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer",
+    "Discovery",
+    "parallax",
+    "section",
+    "dsc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "main": "dsc-polymer-parallax.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/discovery-tecnologia/dsc-polymer-parallax"
+  },
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "web-component-tester": "^4.0.0",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+  }
+}

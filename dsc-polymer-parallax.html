@@ -1,0 +1,68 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="dsc-polymer-parallax">
+
+  <template>
+
+    <style>
+      :host {
+        position: relative;
+        display: block;
+        background-image: var(--banner-img);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-transition: background-image 0.3s linear;
+        transition: background-image 0.3s linear;
+        background-position: center;
+        overflow: hidden;
+      }
+    </style>
+
+    <div id="dsc-paralax">
+      <content id="content"></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'dsc-polymer-parallax',
+
+      properties: {
+
+        /**
+         * Parallax effect flag
+         */
+        parallax: {
+          type: Boolean,
+        },
+
+      },
+
+      /**
+       * On component ready.
+       */
+      ready: function() {
+        // set background
+        this._refreshBackground();
+      },
+
+      /**
+       * Toggles display for current configuration.
+       *
+       * @return {undefined}
+       */
+      _refreshBackground: function() {
+        // Change programmable styles
+        var srcImg = this.getAttribute('background');
+        this.customStyle['--banner-img'] = 'url(' + srcImg + ')';
+      },
+
+    });
+  </script>
+
+</dom-module>
