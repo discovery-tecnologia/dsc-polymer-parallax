@@ -20,10 +20,11 @@
         transition: background-image 0.3s linear;
         background-position: center;
         overflow: hidden;
+        @apply(--dsc-polymer-parallax);
       }
     </style>
 
-    <div id="dsc-paralax">
+    <div id="dsc-parallax">
       <content id="content"></content>
     </div>
   </template>
@@ -60,8 +61,8 @@
         // Change programmable styles
         var srcImg = this.getAttribute('background');
         this.customStyle['--banner-img'] = 'url(' + srcImg + ')';
+        Polymer.updateStyles();
       },
-
     });
   </script>
 

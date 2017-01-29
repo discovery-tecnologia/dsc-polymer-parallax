@@ -28,7 +28,7 @@ $ bower i https://github.com/discovery-tecnologia/dsc-polymer-parallax.git --sav
 Example usage:
 
 ```html
-<dsc-polymer-parallax>
+<dsc-polymer-parallax background="images/img.jpg">
   <h1>Section title</h1>
   <p>Nam mattis porta mattis. Donec et neque scelerisque, pretium arcu sed, vehicula diam. Nam a arcu eu sapien porta<br>posuere id id arcu. Fusce rhoncus erat ut nisl pharetra.</p>
   <a href="#">View more</a>
@@ -39,8 +39,10 @@ Example usage:
 
 | Property       | Description                    | Default       |
 |:---------------|--------------------------------|---------------|
-| interval       | Time in seconds for transition | 5             |
-| parallax       | Active parallax scroll effect  | false         |
+| background     | optional "background" attribute of the section defines the background image. | null |
 
 The content can be any HTML element or other polymer component.
 
+| Custom property |	Description                       | Default |
+|:----------------|-----------------------------------|---------|
+| --dsc-polymer-parallax | Overhide element style     | {}      |

@@ -9,39 +9,49 @@
   <script src="../../web-component-tester/browser.js"></script>
   <script src="../../iron-test-helpers/mock-interactions.js"></script>
 
-  <link rel="import" href="../dsc-polymer-paralax.html">
+  <link rel="import" href="../dsc-polymer-parallax.html">
 
 </head>
 <style>
-
+  dsc-polymer-parallax {
+    background-image: url(teste.jpg);
+  }
 </style>
 <body>
 
   <test-fixture id="basic">
     <template>
-      <dsc-polymer-paralax>
+      <dsc-polymer-parallax background="images/slide-1.jpg">
         <h1>Section title</h1>
-        <p>Nam mattis porta mattis. Donec et neque scelerisque, pretium arcu sed, vehicula diam. Nam a arcu eu sapien porta<br>posuere id id arcu. Fusce rhoncus erat ut nisl pharetra.</p>
+        <p>Nam mattis porta mattis. Donec et neque scelerisque, pretium arcu sed, vehicula diam. Nam a arcu eu sapien porta
+          <br>posuere id id arcu. Fusce rhoncus erat ut nisl pharetra.
+        </p>
         <a href="#">View more</a>
-      </dsc-polymer-paralax>
+      </dsc-polymer-parallax>
     </template>
   </test-fixture>
 
   <script>
-    suite('<dsc-polymer-paralax>', function() {
+    suite('<dsc-polymer-parallax>', function() {
       var container;
 
       setup(function() {
         container = fixture('basic');
       });
 
-      test('Content sections count', function() {
-        // container.setAttribute('show-buttons', 'true');
-        // expect(container.showButtons).to.be.equal(true);
-        // expect(container.querySelector('.buttons').attributes).to.have.ownProperty('visible');
+      test('Check content integrity', function() {
         expect(Polymer.dom(container).queryDistributedElements('*').length).to.be.equal(3);
       });
 
+      test('Check background attribute', function() {
+        var background = container.getAttribute('background');
+        expect(background).to.be.equal('images/slide-1.jpg');
+      });
+
+      test('Verify background style', function() {
+        var background = window.getComputedStyle(container).backgroundImage;
+        expect(background).to.contain('images/slide-1.jpg');
+      });
     });
   </script>
 </body>
