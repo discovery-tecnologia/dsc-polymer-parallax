@@ -1,4 +1,4 @@
-# dsc-polymer-parallax
+# &#60;dsc-polymer-parallax&#62;
 
 [![Build Status](https://travis-ci.org/discovery-tecnologia/dsc-polymer-parallax.svg?branch=master)](http://travis-ci.org/#!/discovery-tecnologia/dsc-polymer-parallax)
 
@@ -12,7 +12,6 @@ Custom content.
 $ git clone https://github.com/discovery-tecnologia/dsc-polymer-parallax.git
 $ cd dsc-polymer-parallax
 $ npm install
-$ bower install
 $ node install -g polymer-cli
 $ polymer serve
 ```
@@ -47,3 +46,11 @@ The content can be any HTML element or other polymer component.
 | Custom property |	Description                       | Default |
 |:----------------|-----------------------------------|---------|
 | --dsc-polymer-parallax | Overhide element style     | {}      |
+
+## Test
+
+Check sintax and execute selenium tests.
+
+```
+$ npm test
+```
