@@ -12,7 +12,7 @@ Custom content.
 $ git clone https://github.com/discovery-tecnologia/dsc-polymer-parallax.git
 $ cd dsc-polymer-parallax
 $ npm install
-$ node install -g polymer-cli
+$ npm install -g polymer-cli
 $ polymer serve
 ```
 Open browser: http://localhost:8080/components/dsc-polymer-parallax/demo/
