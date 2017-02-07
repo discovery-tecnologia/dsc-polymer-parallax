@@ -22,7 +22,7 @@ Open browser: http://localhost:8080/components/dsc-polymer-parallax/demo/
 Install with:
 
 ```
-$ bower i https://github.com/discovery-tecnologia/dsc-polymer-parallax.git --save
+$ bower i dsc-polymer-parallax --save
 ```
 
 Example usage:
