@@ -1,6 +1,8 @@
 # &#60;dsc-polymer-parallax&#62;
 
 [![Build Status](https://travis-ci.org/discovery-tecnologia/dsc-polymer-parallax.svg?branch=master)](http://travis-ci.org/#!/discovery-tecnologia/dsc-polymer-parallax)
+![Bower version](https://img.shields.io/bower/v/dsc-polymer-parallax.svg)
+![](https://img.shields.io/pypi/l/Django.svg)
 
 Sections with background image with parallax effect when page scrolling.
 
